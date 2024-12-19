@@ -1,1 +1,26 @@
-/* You can add global styles to this file, and also import other style files */
+:root {
+  // Variables pour le thème light
+  --background-color: #ffffff;
+  --text-color: #000000;
+  --primary-color: #333;
+  --secondary-color: #555;
+  --link-hover-color: #306cc4;
+  --background-header: #f8f9fa;
+}
+
+:root.dark-theme {
+  // Variables pour le thème dark
+  --background-color: #23283E;
+  --text-color: #f5f5f5;
+  --primary-color: #90A0D9;
+  --secondary-color: #e0e0e0;
+  --link-hover-color: #4080ff;
+  --background-header: #1a1a3a;
+}
+
+body {
+  background-color: var(--background-color);
+  color: var(--text-color);
+  transition: background-color 0.3s ease, color 0.3s ease;
+  font-family: 'Roboto', sans-serif;
+}

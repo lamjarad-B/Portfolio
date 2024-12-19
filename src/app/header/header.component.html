@@ -1,0 +1,66 @@
+<header>
+  <nav>
+    <a href="#!" class="logo">Logo</a>
+    <ul>
+      <li><a href="#projects">Projets</a></li>
+      <li><a href="#experiences">Expériences</a></li>
+      <li><a href="#skills">Compétences</a></li>
+      <li><a href="#educations">Formations</a></li>
+      <li><a href="#contact">Contact</a></li>
+    </ul>
+    <!-- Déplacé hors de la ul -->
+    <button
+    type="button"
+    (click)="toggleTheme()"
+    class="theme-toggle"
+    aria-label="Changer de thème"
+    >
+    <i
+      *ngIf="!(isDarkTheme$ | async)"
+      class="fas fa-moon"
+      aria-hidden="true"
+    ></i>
+    <i
+      *ngIf="isDarkTheme$ | async"
+      class="fas fa-sun"
+      aria-hidden="true"
+    ></i>
+  </button>
+  
+  </nav>
+</header>
+
+
+<!-- <header className='header center'>
+    
+  
+<nav class="center nav">
+    <ul>
+      <li class="nav__list-item">
+        <a href="#projects" class="link link--nav">Projects</a>
+      </li>
+      <li class="nav__list-item">
+        <a href="#skills" class="link link--nav">Skills</a>
+      </li>
+      <li class="nav__list-item">
+        <a href="#contact" class="link link--nav">Contact</a>
+      </li>
+    </ul>
+
+    <button
+      type="button"
+      class="btn btn--icon nav__theme"
+      aria-label="toggle theme"
+    >
+      🌙
+    </button>
+  
+    <button
+      type="button"
+      class="btn btn--icon nav__hamburger"
+      aria-label="toggle navigation"
+    >
+      ☰
+    </button>
+  </nav>
+</header> -->
