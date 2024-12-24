@@ -5,29 +5,15 @@
   <base href="/">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <link href='https://fonts.googleapis.com/css?family=Poppins' rel='stylesheet'>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
   <link rel="icon" type="image/x-icon" href="favicon.ico">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" />
   <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+
   
 </head>
-<script>
-  // Fonction auto-exécutée pour initialiser le thème
-  (function() {
-    // Récupère le thème précédemment sauvegardé dans le localStorage
-    const savedTheme = localStorage.getItem('theme');
 
-    // Vérifie si le système préfère le mode sombre
-    const prefersDarkScheme = window.matchMedia('(prefers-color-scheme: dark)');
-
-    // Conditions pour appliquer le thème sombre :
-    // 1. L'utilisateur a explicitement choisi le thème sombre OU
-    // 2. Aucun thème n'a été choisi ET les préférences système sont en mode sombre
-    if (savedTheme === 'dark' || (savedTheme === null && prefersDarkScheme.matches)) {
-      // Ajoute la classe 'dark-theme' à l'élément racine HTML
-      document.documentElement.classList.add('dark-theme');
-    }
-  })();
-</script>
 <body>
   <app-root></app-root>
 </body>

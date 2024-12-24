@@ -1,9 +1,10 @@
 :root {
   // Variables pour le thème light
   --background-color: #ffffff;
-  --text-color: #000000;
+  --text-color: #444;
   --primary-color: #333;
-  --secondary-color: #555;
+  --secondary-color: #2978b5;
+  --button-color: linear-gradient(0deg, var(--secondary-color) 0%, rgb(2, 73, 251) 100%);
   --link-hover-color: #306cc4;
   --background-header: #f8f9fa;
 }
@@ -11,9 +12,11 @@
 :root.dark-theme {
   // Variables pour le thème dark
   --background-color: #23283E;
-  --text-color: #f5f5f5;
+  --text-color: #cdcdff;
   --primary-color: #90A0D9;
-  --secondary-color: #e0e0e0;
+  --secondary-color: #90a0d9;
+  --button-color: linear-gradient(0deg, #455891 0%, #4a68d9 100%);
+ // --button-color: linear-gradient(0deg, #455891 0%, #2845b5 100%);
   --link-hover-color: #4080ff;
   --background-header: #1a1a3a;
 }
@@ -22,5 +25,12 @@ body {
   background-color: var(--background-color);
   color: var(--text-color);
   transition: background-color 0.3s ease, color 0.3s ease;
-  font-family: 'Roboto', sans-serif;
+  font-family: 'Poppins', sans-serif;
 }
+html, body { 
+  height: 100%;
+  max-width: 1100px;
+  width: 95%;
+  margin: 0 auto;
+}
+body { margin: 0; font-family: Poppins, "Helvetica Neue", sans-serif; }
