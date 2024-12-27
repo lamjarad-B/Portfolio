@@ -9,7 +9,7 @@ import {MatButtonModule} from '@angular/material/button';
   imports: [CommonModule, MatCardModule, MatButtonModule],
   templateUrl: './profile-section.component.html',
   styleUrl: './profile-section.component.scss',
-  encapsulation : ViewEncapsulation.ShadowDom
+  //encapsulation : ViewEncapsulation.ShadowDom
 })
 export class ProfileSectionComponent {
 

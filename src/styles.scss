@@ -21,6 +21,37 @@
   --background-header: #1a1a3a;
 }
 
+@mixin progressive-underline(
+  $height: 0.2em,
+  $bottom: 0,
+  $underline-color: var(--link-hover-color),
+  $hover-color: var(--secondary-color),
+  $duration: 0.2s
+) {
+  position: relative;
+  transition: color $duration ease-in;
+
+  &:hover {
+    color: $hover-color;
+  }
+
+  &::after {
+    content: '';
+    position: absolute;
+    bottom: $bottom;
+    left: 0;
+    width: 0;
+    height: $height;
+    background-color: $underline-color;
+    transition: width $duration ease-in;
+  }
+
+  &:hover::after,
+  &:focus::after {
+    width: 100%;
+  }
+}
+
 body {
   background-color: var(--background-color);
   color: var(--text-color);
@@ -34,3 +65,18 @@ html, body {
   margin: 0 auto;
 }
 body { margin: 0; font-family: Poppins, "Helvetica Neue", sans-serif; }
+
+section{
+  h1.titleSection{
+      text-transform: uppercase;
+      text-align: center;
+      font-size: 2rem;
+      &::after{
+          border-bottom: .5rem solid #306cc4;
+          width: 4rem;
+          margin: .2rem auto 0;
+          content: "";
+          display: block;
+      }
+  }
+}

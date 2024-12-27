@@ -1,4 +1,5 @@
-$transition-duration: 0.3s;
+@import '../../styles.scss';
+//$transition-duration: 0.3s;
 $font-family: 'Poppins', sans-serif;
 
 header {
@@ -24,24 +25,9 @@ header {
       font-weight: bold;
       color: var(--secondary-color);
       text-decoration: none;
-      position: relative;
-      //transition: color $transition-duration ease;
 
       // Trait progressif
-      &::after {
-        content: '';
-        position: absolute;
-        bottom: -4px;
-        left: 0;
-        width: 0;
-        height: 5px;
-        background-color: var(--link-hover-color);
-        transition: width $transition-duration ease;
-      }
-
-      &:hover::after {
-        width: 100%;
-      }
+      @include progressive-underline( $bottom: -4px )
     }
 
     ul {
@@ -58,28 +44,10 @@ header {
           color: var(--primary-color);
           font-size: 1rem;
           font-weight: 500;
-          position: relative;
-          transition: color $transition-duration ease;
-
-          &:hover {
-            color: var(--link-hover-color);
-          }
 
           // Trait progressif
-          &::after {
-            content: '';
-            position: absolute;
-            bottom: -4px;
-            left: 0;
-            width: 0;
-            height: 3px;
-            background-color: var(--link-hover-color);
-            transition: width $transition-duration ease;
-          }
+          @include progressive-underline( $bottom: -4px )
 
-          &:hover::after {
-            width: 100%;
-          }
         }
         button{
           span{
