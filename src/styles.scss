@@ -7,25 +7,28 @@
   --button-color: linear-gradient(0deg, var(--secondary-color) 0%, rgb(2, 73, 251) 100%);
   --link-hover-color: #306cc4;
   --background-header: #f8f9fa;
+  --shadow-color: rgba(26, 26, 27, 0.2) 0 0.44rem 1.81rem 0;
 }
 
 :root.dark-theme {
   // Variables pour le thème dark
   --background-color: #23283E;
   --text-color: #cdcdff;
-  --primary-color: #90A0D9;
+  --primary-color: #bdbddd;
   --secondary-color: #90a0d9;
   --button-color: linear-gradient(0deg, #455891 0%, #4a68d9 100%);
  // --button-color: linear-gradient(0deg, #455891 0%, #2845b5 100%);
-  --link-hover-color: #4080ff;
+  --link-hover-color: #90a0d9;
   --background-header: #1a1a3a;
+  --shadow-color: rgba(0, 0, 15, 0.3) 0 0.44rem 1.81rem 0;
+
 }
 
 @mixin progressive-underline(
   $height: 0.2em,
   $bottom: 0,
   $underline-color: var(--link-hover-color),
-  $hover-color: var(--secondary-color),
+  $hover-color: var(--link-hover-color),
   $duration: 0.2s
 ) {
   position: relative;
