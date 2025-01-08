@@ -6,22 +6,24 @@ section{
     // box-shadow: none;
     //margin-top: 6rem;
     h1, article{
-        flex: 1; /* Permet aux éléments de prendre une part égale */
-        max-width: 50%; /* Empêche les éléments de dépasser 50% de la largeur */
+        //flex: 1; /* Permet aux éléments de prendre une part égale */
+        //max-width: 50%; /* Empêche les éléments de dépasser 50% de la largeur */
         box-sizing: border-box; /* Inclut les bordures et marges dans le calcul de la largeur */
         //width: 50%;
         //flex: 50%;
     }
     h1{
-        font-size: 5rem;
+        font-size: 5.5rem;
         line-height: 1.1;
         font-weight: 700;
+        flex-basis: 50%;
         span{
             color: var(--secondary-color);
         }
     }
     article{
         font-size: 1.15rem;
+        flex-basis: 40%;
         .liens{
           display: flex;
           .buttonCV{

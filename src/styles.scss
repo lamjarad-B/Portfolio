@@ -7,7 +7,8 @@
   --button-color: linear-gradient(0deg, var(--secondary-color) 0%, rgb(2, 73, 251) 100%);
   --link-hover-color: #306cc4;
   --background-header: #f8f9fa;
-  --shadow-color: rgba(26, 26, 27, 0.2) 0 0.44rem 1.81rem 0;
+  --shadow-color: rgba(26, 26, 27, 0.2) 0 0.2rem 0.9rem 0;
+  --radio-background-color: #e0e0e0;
 }
 
 :root.dark-theme {
@@ -20,8 +21,8 @@
  // --button-color: linear-gradient(0deg, #455891 0%, #2845b5 100%);
   --link-hover-color: #90a0d9;
   --background-header: #1a1a3a;
-  --shadow-color: rgba(0, 0, 15, 0.3) 0 0.44rem 1.81rem 0;
-
+  --shadow-color: rgba(0, 0, 15, 0.2) 0 0.44rem 1.81rem 0;
+  --radio-background-color: #455891;
 }
 
 @mixin progressive-underline(
@@ -55,21 +56,34 @@
   }
 }
 
+html, body { 
+  width: 100%; 
+  margin: 0;
+  padding: 0;
+  max-width: 100%; 
+  cursor: auto;
+  transition: background-color .1s linear;
+  line-height: 1.5;
+}
 body {
+  width: 100%; 
+  max-width: 1130px;  
+  margin: 0 auto;
   background-color: var(--background-color);
   color: var(--text-color);
   transition: background-color 0.3s ease, color 0.3s ease;
   font-family: 'Poppins', sans-serif;
+
+  > app-root {
+    display: block;
+    width: inherit;
+    max-width: inherit;
+    margin: 0 auto;
+  }
 }
-html, body { 
-  height: 100%;
-  max-width: 1100px;
-  width: 95%;
-  margin: 0 auto;
-}
-body { margin: 0; font-family: Poppins, "Helvetica Neue", sans-serif; }
 
 section{
+  display: block;
   h1.titleSection{
       text-transform: uppercase;
       text-align: center;
