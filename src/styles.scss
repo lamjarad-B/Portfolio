@@ -9,6 +9,7 @@
   --background-header: #f8f9fa;
   --shadow-color: rgba(26, 26, 27, 0.2) 0 0.2rem 0.9rem 0;
   --radio-background-color: #e0e0e0;
+  --toTop-color: #2978b5;
 }
 
 :root.dark-theme {
@@ -23,6 +24,7 @@
   --background-header: #1a1a3a;
   --shadow-color: rgba(0, 0, 15, 0.2) 0 0.44rem 1.81rem 0;
   --radio-background-color: #455891;
+  --toTop-color: #455891;
 }
 
 @mixin progressive-underline(
@@ -64,8 +66,10 @@ html, body {
   cursor: auto;
   transition: background-color .1s linear;
   line-height: 1.5;
+  scroll-behavior: smooth;
 }
 body {
+  position: relative;
   width: 100%; 
   max-width: 1130px;  
   margin: 0 auto;
@@ -83,7 +87,8 @@ body {
 }
 
 section{
-  display: block;
+  //display: block;
+  //margin-bottom: 5rem;
   h1.titleSection{
       text-transform: uppercase;
       text-align: center;

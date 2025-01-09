@@ -1,0 +1,118 @@
+// Styles du bouton "Retour en haut"
+.to-top {
+  // Reset des marges et padding
+  margin: 0 !important;
+  padding: 0 !important;
+  
+  // État initial du bouton (invisible)
+  background: #fff;
+  height: 0px;
+  width: 0px;
+  overflow: hidden;
+  border-radius: 50px;
+  -webkit-border-radius: 50px;
+  -moz-border-radius: 50px;
+  color: transparent;
+  visibility: hidden;
+  
+  // Positionnement fixe en bas à droite
+  position: fixed;
+  right: 50px;
+  bottom: 75px;
+  
+  // Styles de base
+  clear: both;
+  cursor: pointer;
+  display: block;
+  border: none;
+  font-size: 0px;
+  outline: 0 !important;
+  z-index: 99;
+  
+  // Animation de transition
+  -webkit-transition: all .3s ease-in-out;
+  transition: all .3s ease-in-out;
+  
+  // Styles au survol et focus
+  &:hover,
+  &:active,
+  &:focus {
+    outline: 0 !important;
+  }
+
+  // Création de la flèche avec les pseudo-éléments
+  &::before,
+  &::after {
+    content: "";
+    display: block;
+    vertical-align: middle;
+    // Triangle en CSS
+    border-bottom: solid 10px var(--toTop-color);
+    border-left: solid 10px transparent;
+    border-right: solid 10px transparent;
+    height: 0;
+    width: 0;
+    margin: 18px auto 0;
+    border-radius: 20px;
+    visibility: hidden;
+    line-height: 0;
+  }
+
+  // Affichage des flèches quand le bouton est visible
+  &.show::after,
+  &.show::before {
+    visibility: visible;
+  }
+
+  // Deuxième flèche (superposée)
+  &::after {
+    border-bottom-color: #fff;
+    position: relative;
+    top: -24px;
+  }
+
+  // État visible du bouton
+  &.show {
+    // Nouvelles dimensions et position
+    height: 50px;
+    width: 50px;
+    right: 25px;
+    bottom: 50px;
+    
+    // Styles visibles
+    display: block;
+    background: #fff;
+    color: #00ab6c;
+    font-size: 25px;
+    visibility: visible;
+    
+    // Ombre portée
+    box-shadow: 0px 2px 4px 1px rgba(0, 0, 0, 0.25);
+    -webkit-box-shadow: 0px 2px 4px 1px rgba(0, 0, 0, 0.25);
+    -moz-box-shadow: 0px 2px 4px 1px rgba(0, 0, 0, 0.25);
+
+    // Ombre plus prononcée au clic
+    &:active {
+      box-shadow: 0px 4px 8px 2px rgba(0, 0, 0, 0.25);
+      -webkit-box-shadow: 0px 4px 8px 2px rgba(0, 0, 0, 0.25);
+      -moz-box-shadow: 0px 4px 8px 2px rgba(0, 0, 0, 0.25);
+    }
+  }
+
+  // Cache l'icône Font Awesome car on utilise les pseudo-éléments
+  i {
+    display: none;
+  }
+}
+
+// // Styles de la navigation
+// .nav {
+//   background: transparent;
+//   transition: background-color 0.3s ease;
+
+//   // Style au scroll
+//   &.scroll {
+//     background-color: #333;
+//     color: #fff;
+//   }
+// }
