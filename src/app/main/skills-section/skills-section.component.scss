@@ -33,17 +33,14 @@ $transition-duration: 0.3s;
 
 section{
   display: block;
-  //width: 95%;
   width: inherit;
   max-width: inherit; // Hérite de la largeur maximale définie dans le parent
-  margin: 0 auto;
   padding: 0;
   // Styles
   article {
     width: 100%;
     margin: 0 auto;
     padding: 1.25rem 0;
-    //padding: 1.25rem;
 
     // Navigation
     > ul:first-child {
@@ -72,6 +69,14 @@ section{
         input[type="radio"]:checked + label {
           background-color: var(--secondary-color);
           color: white;
+        }
+      }
+      @media (max-width: 768px){
+        flex-wrap: wrap;
+        margin-bottom: 0;
+        //flex-direction: column;
+        li{
+          margin-bottom: 1rem;
         }
       }
     }
@@ -183,6 +188,9 @@ section{
 #skills{
   overflow-x: auto;
   max-height: 19.5rem;
+  @media (max-width: 1200px){
+    width: 90%;
+  }
   
 }
 

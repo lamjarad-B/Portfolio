@@ -1,31 +1,39 @@
-<header class="header">
+<header class="header" #header>
   <nav>
-    <a href="/" class="logo">BL.</a>
-    <ul>
+    <a href="https://github.com/lamjarad-B" target="_blank" class="logo">BL.</a>
+    
+    <!-- Burger Menu Button -->
+    <div class="burger-menu" (click)="toggleMenu()">
+      <span></span>
+      <span></span>
+      <span></span>
+    </div>
+
+    <!-- Navigation Menu -->
+    <ul [class.active]="isMenuOpen">
       <li><a routerLink="/projects">Projets</a></li>
-      <!-- <li><a routerLink="/profile" routerLinkActive="active">Profil</a></li>-->
       <li><a href="#experiences">Expériences</a></li>
       <li><a href="#skills">Compétences</a></li>
       <li><a href="#educations">Formations</a></li>
       <li><a href="#contact">Contact</a></li>
     </ul>
+
+    <!-- Theme Toggle Button -->
     <button
-    type="button"
-    (click)="toggleTheme()"
-    class="theme-toggle"
-    aria-label="Changer de thème"
-    >
-    <i
-      *ngIf="!(isDarkTheme$ | async)"
-      class="fas fa-moon"
-      aria-hidden="true"
-    ></i>
-    <i
-      *ngIf="isDarkTheme$ | async"
-      class="fas fa-sun"
-      aria-hidden="true"
-    ></i>
-  </button>
-  
+      type="button"
+      (click)="toggleTheme()"
+      class="theme-toggle"
+      aria-label="Changer de thème">
+      <i
+        *ngIf="!(isDarkTheme$ | async)"
+        class="fas fa-moon"
+        aria-hidden="true"
+      ></i>
+      <i
+        *ngIf="isDarkTheme$ | async"
+        class="fas fa-sun"
+        aria-hidden="true"
+      ></i>
+    </button>
   </nav>
 </header>

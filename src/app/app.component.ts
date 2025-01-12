@@ -4,11 +4,13 @@ import { RouterModule, RouterOutlet } from '@angular/router';
 import { HeaderComponent } from './header/header.component';
 import { ProjectsSectionComponent } from "./main/projects-section/projects-section.component";
 import { SkillsSectionComponent } from './main/skills-section/skills-section.component';
+import { ContactSectionComponent } from './main/contact-section/contact-section.component';
+import { FooterComponent } from './footer/footer.component';
 
 @Component({
   selector: 'app-root',
   standalone: true,
-  imports: [RouterOutlet, RouterModule, CommonModule, HeaderComponent, ProjectsSectionComponent, SkillsSectionComponent],
+  imports: [RouterOutlet, RouterModule, CommonModule, HeaderComponent, ProjectsSectionComponent, SkillsSectionComponent, ContactSectionComponent, FooterComponent],
   templateUrl: 'app.component.html',
   styleUrl: './app.component.scss'
 })
@@ -19,27 +21,26 @@ export class AppComponent {
 
   // Écoute l'événement de défilement de la fenêtre
   @HostListener('window:scroll')
+
   onWindowScroll() {
     // Récupère la position actuelle du scroll
-    const scrollPosition = window.scrollY || document.documentElement.scrollTop || document.body.scrollTop || 0;
-    
+    const scrollPosition =
+      window.scrollY || document.documentElement.scrollTop || document.body.scrollTop || 0;
+  
     // Gestion du bouton "Retour en haut"
     const toTopButton = this.el.nativeElement.querySelector('.to-top');
-    // Affiche le bouton après 200px de défilement
-    if (scrollPosition > 200) {
-      this.renderer.addClass(toTopButton, 'show');
-    } else {
-      this.renderer.removeClass(toTopButton, 'show');
-    }
-
-    // Gestion de la navigation
-    const header = this.el.nativeElement.querySelector('.header');
-   // const navElements = document.querySelectorAll('.nav, #icone, .closeMenu');
-    // Change le style de la navigation après 25px de défilement
-    if (scrollPosition > 100) {
-      this.renderer.addClass(header, 'scroll');
-    } else {
-      this.renderer.removeClass(header, 'scroll');
+    const headerElement = this.el.nativeElement.querySelector('.header');
+  
+    // Vérifie si l'élément header est présent pour éviter les erreurs
+    if (headerElement) {
+      const headerWidth = headerElement.offsetWidth; // Récupère la largeur de .header
+  
+      // Condition : scrollPosition > 200 ET largeur de .header > 992px
+      if (scrollPosition > 200 && headerWidth > 992) {
+        this.renderer.addClass(toTopButton, 'show');
+      } else {
+        this.renderer.removeClass(toTopButton, 'show');
+      }
     }
   }
 
@@ -56,5 +57,20 @@ export class AppComponent {
         clearInterval(scrollInterval);
       }
     }, 15); // Intervalle de 15ms pour une animation fluide
+  }
+
+  // Observateur de redimensionnement pour l'élément header
+  ngAfterViewInit() {
+    const headerElement = this.el.nativeElement.querySelector('.header');
+    if (headerElement) {
+      const resizeObserver = new ResizeObserver((entries) => {
+        for (let entry of entries) {
+          const width = entry.contentRect.width;
+          console.log('Header width:', width);
+        }
+      });
+
+      resizeObserver.observe(headerElement);
+    }
   }
 }

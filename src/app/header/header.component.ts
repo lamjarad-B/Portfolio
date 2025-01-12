@@ -23,4 +23,14 @@ export class HeaderComponent implements OnInit {
   toggleTheme() {
     this.themeService.toggleTheme();
   }
+  isMenuOpen = false;
+
+  toggleMenu() {
+    this.isMenuOpen = !this.isMenuOpen;
+    const burger = document.querySelector('.burger-menu');
+    const menu = document.querySelector('ul');
+    
+    burger?.classList.toggle('active');
+    menu?.classList.toggle('active');
+  }
 }

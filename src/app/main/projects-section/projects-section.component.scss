@@ -1,29 +1,91 @@
-
 @import '../../../styles.scss';
-$duration: 0.3s; // Durée des transitions
-section{
-  .container{
-    display: flex;
-    justify-content: space-between;
-    flex-wrap: wrap;
-    height: 43rem;
-    //max-height: 80%;
-    overflow-x: auto;
-    scroll-behavior: smooth;
+// Points d'arrêt
+$breakpoint-xl: 1400px;
+$breakpoint-lg: 1200px;
+$breakpoint-md: 992px;
+$breakpoint-sm: 768px;
+$duration: 0.3s;
+
+section {
+  width: 100%;
+  padding: 2rem;
+  box-sizing: border-box;
+
+  @media (max-width: $breakpoint-sm) {
+    width: 95%;
+    padding: 1rem;
+    margin:auto;
+  }
+
+  .container {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(min(100%, 26rem), 1fr));
+    gap: 2rem;
+    width: 100%;
+    max-width: 1600px;
+    margin: 0 auto;
+    height: auto;
+    max-height: 80vh;
+    overflow-y: auto;
+    padding: 1rem;
+    box-sizing: border-box;
+
+    // Personnalisation de la barre de défilement
+    &::-webkit-scrollbar {
+      width: 8px;
+    }
+
+    &::-webkit-scrollbar-track {
+      background: rgba(0, 0, 0, 0.1);
+      border-radius: 4px;
+    }
+
+    &::-webkit-scrollbar-thumb {
+      background: var(--secondary-color);
+      border-radius: 4px;
+    }
+
+    // Ajustements responsives
+    @media (max-width: $breakpoint-xl) {
+      grid-template-columns: repeat(auto-fill, minmax(min(100%, 24rem), 1fr));
+    }
+
+    @media (max-width: $breakpoint-lg) {
+      grid-template-columns: repeat(auto-fill, minmax(min(100%, 22rem), 1fr));
+    }
+
+    @media (max-width: $breakpoint-md) {
+      grid-template-columns: repeat(auto-fill, minmax(min(100%, 20rem), 1fr));
+      gap: 1.5rem;
+    }
+
+    @media (max-width: $breakpoint-sm) {
+      grid-template-columns: 1fr;
+      padding: 0.5rem;
+      gap: 1rem;
+
+    }
 
     .card {
       text-align: center;
-      margin: 1.25rem auto; // Centrage horizontal et espace vertical
-      max-width: 26rem; // Largeur maximale pour un design responsive
+      margin: 0; // Supprimé car nous utilisons grid gap
+      width: 100%;
+      max-width: 26rem;
       background-color: var(--background-color);
-      border-radius: 0.5rem; // Coins arrondis
+      border-radius: 1rem;
       overflow: hidden;
-      transition: box-shadow $duration ease, transform $duration ease; /* Ajout de la transition pour la transformation */
+      transition: box-shadow $duration ease, transform $duration ease;
       box-shadow: var(--shadow-color);
-    
-      &:hover {
-        box-shadow: 0 0 3.125rem rgba(0, 0, 0, 0.3);
-        transform: translateY(-10px); /* Déplace légèrement l'article vers le haut */
+      justify-self: center; // Centre la carte dans sa colonne
+      
+      @media (hover: hover) {
+        &:hover {
+          box-shadow: 0 0 3.125rem rgba(0, 0, 0, 0.3);
+          transform: translateY(-10px);
+        }
+      }
+      @media (max-width: $breakpoint-sm) {
+        margin-bottom: 2rem;
       }
     
       header {
@@ -56,8 +118,8 @@ section{
       
     
         h1 {
-          margin: 0 0 0.625rem; // Marges en rem
-          font-size: 1.1875rem; // Taille de police du sous-titre
+          margin: 0 0 0.625rem; 
+          font-size: 1.1875rem; 
           font-weight: bold;
           color: var(--text-color);
           text-align: center;
@@ -65,7 +127,7 @@ section{
     
         p{
           margin: 0;
-          font-size: 0.875rem; // Taille de police de la description
+          font-size: 0.875rem; 
           color: var(--text-color);
           text-align: justify;
         }

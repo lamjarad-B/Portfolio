@@ -1,0 +1,35 @@
+@import '../../../styles.scss';
+article{
+    ul{
+        display: flex;
+        justify-content: center;
+        @media (max-width: 576px){
+            flex-direction: column;
+            align-items: center;
+        }
+        li{
+            list-style: none;
+            @media (max-width: 576px){
+                margin-bottom: 1rem;
+            }
+            .courriel, .github, .linkedin{
+                @include custom-button();
+                button{
+                    width: 9.125rem;
+                    span{
+                        font-size: 0.9rem;
+                        i{
+                            margin-right: 0.3rem;
+                            transition: color 0.3s ease;
+                        }
+                    }
+                    &:hover {
+                        i {
+                          color: var(--secondary-color) !important; 
+                        }
+                      }
+                }
+            }
+        }
+    }
+}

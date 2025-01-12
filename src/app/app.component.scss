@@ -45,7 +45,7 @@
   &::after {
     content: "";
     display: block;
-    vertical-align: middle;
+    //vertical-align: middle;
     // Triangle en CSS
     border-bottom: solid 10px var(--toTop-color);
     border-left: solid 10px transparent;
@@ -101,6 +101,9 @@
 
   // Cache l'icône Font Awesome car on utilise les pseudo-éléments
   i {
+    display: none;
+  }
+  @media (max-width: 992px) {
     display: none;
   }
 }
