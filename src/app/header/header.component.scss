@@ -1,6 +1,5 @@
 @import '../../styles.scss';
 // Variables globales
-$mobile-breakpoint: 768px;
 $header-height: 4rem;
 $transition-duration: 0.3s;
 
@@ -13,7 +12,7 @@ $transition-duration: 0.3s;
   padding: 5px 0;
   background: var(--background-color);
   position: relative;
-  z-index: 1000; // Assure que le header reste au-dessus des autres éléments
+  //z-index: 1000; // Assure que le header reste au-dessus des autres éléments
 
   // Navigation principale
   nav {
@@ -90,7 +89,7 @@ $transition-duration: 0.3s;
       margin: 0;
       padding: 0;
       position: absolute;
-      left: 34rem;
+      left: 44rem;
 
       li {
         margin-left: 20px;
@@ -144,16 +143,28 @@ $transition-duration: 0.3s;
       ul {
         left: 20rem;
       }
+      .logo {
+        margin-left: 2rem;
+      }
+      .theme-toggle {
+        margin-right: 2rem;
+      }
     }
 
     @media (max-width: 900px) {
       ul {
         left: 10rem;
       }
+      .logo {
+        margin-left: 2rem;
+      }
+      .theme-toggle {
+        margin-right: 2rem;
+      }
     }
 
     // Styles pour mobile
-    @media (max-width: $mobile-breakpoint) {
+    @media (max-width: 768px) {
       // Affiche le menu burger
       .burger-menu {
         display: block;

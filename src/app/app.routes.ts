@@ -1,6 +1,8 @@
+import { SkillsSectionComponent } from './main/skills-section/skills-section.component';
 import { Routes } from '@angular/router';
 import { ProfileSectionComponent } from './main/profile-section/profile-section.component';
 import { ProjectsSectionComponent } from './main/projects-section/projects-section.component';
+import { ContactSectionComponent } from './main/contact-section/contact-section.component';
 
 export const routes: Routes = [
   // {
@@ -20,6 +22,15 @@ export const routes: Routes = [
     path: 'projects',
     component: ProjectsSectionComponent,
   },
+  {
+    path: 'skills',
+    component: SkillsSectionComponent,
+  },
+  {
+    path: 'contact',
+    component: ContactSectionComponent,
+  },
+  
   {
     path: '**',
     redirectTo: '', // Redirige tout chemin non valide vers la racine

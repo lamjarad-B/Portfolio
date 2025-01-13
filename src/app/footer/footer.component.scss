@@ -1,0 +1,16 @@
+// .footer{
+//     width: calc(100vw - (100vw - 100%));
+//     margin-left: calc((100vw - 100%) / -2);
+//     margin-right: calc((100vw - 100%) / -2);
+//     text-align: center;
+// }
+footer{
+    width: 100vw;
+    position: relative;
+    left: 50%;
+    transform: translateX(-50%);
+    padding: 1.5rem;
+    text-align: center;
+    box-shadow: 0 -4px 6px rgba(0, 0, 0, 0.1);
+    box-sizing: border-box;
+}
