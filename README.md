@@ -21,7 +21,7 @@ Envie de collaborer ou d’en savoir plus sur mon travail ? Cette section prop
 - **SASS** : Préprocesseur CSS pour une écriture plus modulaire et maintenable.  
 - **Angular** : Framework moderne pour le développement d’applications web interactives et performantes.  
 
-##💡 **Inspirations**
+## 💡 **Inspirations**
 
 Ce portfolio s'inspire de designs modernes et minimalistes pour offrir une expérience utilisateur fluide et agréable.
 
