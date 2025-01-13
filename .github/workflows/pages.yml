@@ -43,7 +43,7 @@ jobs:
       - name: Install dependencies
         run: npm ci
       - name: Build website
-        run: ng build --output-path docs --base-href /Portfolio/
+        run: npx ng build --output-path docs --base-href /Portfolio/
       - name: Setup Pages
         uses: actions/configure-pages@v5
       - name: Upload artifact
