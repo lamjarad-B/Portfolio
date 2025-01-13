@@ -45,7 +45,7 @@ jobs:
       - name: Build website
         run: npx ng build --output-path docs --base-href /Portfolio/
       - name: Move static files
-        run: mv dist/portfolio/browser/** dist/portfolio/
+        run: mv docs/portfolio/browser/** docs/portfolio/
       - name: Setup Pages
         uses: actions/configure-pages@v5
       - name: Upload artifact
