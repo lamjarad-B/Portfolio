@@ -57,16 +57,19 @@ section {
     @media (max-width: $breakpoint-md) {
       grid-template-columns: repeat(auto-fill, minmax(min(100%, 20rem), 1fr));
       gap: 1.5rem;
+      overflow-y: hidden;
+      max-height: 100%;
     }
 
     @media (max-width: $breakpoint-sm) {
       grid-template-columns: 1fr;
       padding: 0.5rem;
       gap: 1rem;
-
+      overflow-y: hidden;
+      max-height: 100%;
     }
 
-    .card {
+    .card { 
       text-align: center;
       margin: 0; // Supprimé car nous utilisons grid gap
       width: 100%;

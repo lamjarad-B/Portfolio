@@ -96,7 +96,7 @@ section{
       text-align: center;
       font-size: 2rem;
       &::after{
-          border-bottom: .5rem solid #306cc4;
+          border-bottom: .5rem solid var(--secondary-color);
           width: 4rem;
           margin: .2rem auto 0;
           content: "";
