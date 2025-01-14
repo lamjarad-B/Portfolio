@@ -1,63 +1,30 @@
-<<<<<<< HEAD
-# Portfolio
+# Portfolio - Brahim Lamjarad  
 
-This project was generated using [Angular CLI](https://github.com/angular/angular-cli) version 19.0.4.
+Bienvenue sur mon portfolio personnel ! Ce projet reflète ma passion pour la création, l'innovation et le développement web. Il vous permettra de découvrir mon parcours, mes projets, mes compétences et mes moyens de contact.  
 
-## Development server
+## 🖋️ **Sections**  
 
-To start a local development server, run:
+### 1. **Profile**  
+Une introduction sur moi, mes centres d’intérêt et ma vision du développement informatique. Toujours curieux et passionné, je mets en avant mon approche orientée vers l’innovation et la résolution de problèmes.  
 
-```bash
-ng serve
-```
+### 2. **Projets**  
+Un aperçu de mes projets récents, où je mets en pratique mes compétences en développement web et mes connaissances techniques. Chaque projet est décrit avec ses technologies clés, ses objectifs et ses résultats.  
 
-Once the server is running, open your browser and navigate to `http://localhost:4200/`. The application will automatically reload whenever you modify any of the source files.
+### 3. **Compétences**  
+Une présentation de mes compétences techniques et transversales, acquises à travers mes expériences et mes projets. Vous y trouverez notamment mon expertise en développement front-end et back-end.  
 
-## Code scaffolding
+### 4. **Contact**  
+Envie de collaborer ou d’en savoir plus sur mon travail ? Cette section propose différentes manières de me contacter directement.  
 
-Angular CLI includes powerful code scaffolding tools. To generate a new component, run:
+## 🛠️ **Technologies utilisées**  
+- **HTML/CSS** : Structure et style de base.  
+- **SASS** : Préprocesseur CSS pour une écriture plus modulaire et maintenable.  
+- **Angular** : Framework moderne pour le développement d’applications web interactives et performantes.  
 
-```bash
-ng generate component component-name
-```
+## 💡 **Inspirations**
 
-For a complete list of available schematics (such as `components`, `directives`, or `pipes`), run:
+Ce portfolio s'inspire de designs modernes et minimalistes pour offrir une expérience utilisateur fluide et agréable.
 
-```bash
-ng generate --help
-```
+---
 
-## Building
-
-To build the project run:
-
-```bash
-ng build
-```
-
-This will compile your project and store the build artifacts in the `dist/` directory. By default, the production build optimizes your application for performance and speed.
-
-## Running unit tests
-
-To execute unit tests with the [Karma](https://karma-runner.github.io) test runner, use the following command:
-
-```bash
-ng test
-```
-
-## Running end-to-end tests
-
-For end-to-end (e2e) testing, run:
-
-```bash
-ng e2e
-```
-
-Angular CLI does not come with an end-to-end testing framework by default. You can choose one that suits your needs.
-
-## Additional Resources
-
-For more information on using the Angular CLI, including detailed command references, visit the [Angular CLI Overview and Command Reference](https://angular.dev/tools/cli) page.
-=======
-# Portfolio
->>>>>>> 8f1eb3043d2a01a2c77d291eacc78eda885377f4
+Merci de visiter mon portfolio ! 😊  

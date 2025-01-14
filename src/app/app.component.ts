@@ -6,11 +6,12 @@ import { ProjectsSectionComponent } from "./main/projects-section/projects-secti
 import { SkillsSectionComponent } from './main/skills-section/skills-section.component';
 import { ContactSectionComponent } from './main/contact-section/contact-section.component';
 import { FooterComponent } from './footer/footer.component';
+import { EducationSectionComponent } from './main/education-section/education-section.component';
 
 @Component({
   selector: 'app-root',
   standalone: true,
-  imports: [RouterOutlet, RouterModule, CommonModule, HeaderComponent, ProjectsSectionComponent, SkillsSectionComponent, ContactSectionComponent, FooterComponent],
+  imports: [RouterOutlet, RouterModule, CommonModule, HeaderComponent, ProjectsSectionComponent, SkillsSectionComponent, ContactSectionComponent, FooterComponent, EducationSectionComponent],
   templateUrl: 'app.component.html',
   styleUrl: './app.component.scss'
 })
