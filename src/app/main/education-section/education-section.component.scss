@@ -12,7 +12,7 @@ $breakpoint-mobile: 480px;
 // Styles
 section {
   position: relative;
-  width: 95%;
+  width: 100%;
   max-width: inherit;
   margin: 0 auto;
   margin-right: 6rem;
@@ -70,7 +70,19 @@ section {
   position: relative;
   z-index: 2;
   margin-top: 1.5rem;
+  margin-left: -1.5rem;
+  transition: transform 0.3s ease;
+  &:hover {
+    transform: scale(1.05);
+  }
 
+  @include respond-to($breakpoint-tablet) {
+    margin-left: 0;
+  }
+
+  @include respond-to($breakpoint-mobile) {
+    margin-left: 0;
+  }
   i {
     display: block;
     font-size: 1.5rem;
@@ -111,7 +123,12 @@ section {
   padding: 1.5rem;
   border: 2px solid var(--secondary-color);
   background: var(--background-color);
+  box-shadow: var(--shadow-color);
   flex-grow: 1;
+  transition: transform 0.3s ease;
+  &:hover {
+    transform: scale(1.005);
+  }
 
   &::after,
   &::before {
