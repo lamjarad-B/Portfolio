@@ -120,7 +120,7 @@ section{
         height: $card-height;
         width: $card-min-width;
         margin: 0.3rem;
-        padding: 1rem;
+        padding: 0;
         border-radius: $border-radius;
         @include card-shadow;
         transition: all $transition-duration ease;

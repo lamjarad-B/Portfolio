@@ -11,10 +11,10 @@
 
     <!-- Navigation Menu -->
     <ul [class.active]="isMenuOpen">
-      <li><a href="#profile">Profile</a></li>
-      <li><a href="#projects">Projets</a></li>
-      <li><a href="#skills">Compétences</a></li>
-      <li><a href="#contact">Contact</a></li>
+      <li><a href="#profile" (click)="closeMenu()">Profile</a></li>
+      <li><a href="#projects" (click)="closeMenu()">Projets</a></li>
+      <li><a href="#skills" (click)="closeMenu()">Compétences</a></li>
+      <li><a href="#contact" (click)="closeMenu()">Contact</a></li>
     </ul>
 
     <!-- Theme Toggle Button -->
