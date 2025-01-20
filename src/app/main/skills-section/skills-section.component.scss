@@ -189,7 +189,10 @@ section{
   overflow-x: auto;
   max-height: 19.5rem;
   @media (max-width: 1200px){
-    width: 90%;
+    width: 95%;
+  }
+  @media (max-width: 900px){
+    width: 95%;
   }
   
 }

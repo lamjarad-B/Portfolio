@@ -109,11 +109,11 @@ section {
           $text-color: #fff,
           $hover-color: rgba(2, 126, 251, 1),
           //$height: 2.7rem,
-          $padding: 0.5rem 0.3rem 0.3rem
+          $padding: 0.5rem 0.65rem 0.3rem 0.65rem
         );
 
         .custom-btn {
-          width: 3rem;
+          //width: 3rem;
 
           svg {
             display: block;
