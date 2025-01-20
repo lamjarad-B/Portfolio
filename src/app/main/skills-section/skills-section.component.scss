@@ -2,7 +2,7 @@
 // Variables
 //$primary-color: #007bff;
 //$shadow-color: rgba(0, 0, 0, 0.1);
-$card-height: 8rem;
+$card-height: 9rem;
 $card-min-width: 9rem;
 $logo-size: 3rem;
 $border-radius: 1.5rem;
@@ -108,12 +108,13 @@ section{
       display: flex;
       flex-wrap: wrap;
       gap: 1.5rem;
-      padding: 0 0.5rem;
+      padding: 0;
       list-style: none;
       margin: 0 auto;
       justify-content: center;
       margin-bottom: 1rem;
       font-weight: 500;
+      margin: 0 0.5rem;
 
       li {
         @include flex-center;
