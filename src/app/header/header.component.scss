@@ -88,7 +88,7 @@ $transition-duration: 0.3s;
       margin: 0;
       padding: 0;
       position: absolute;
-      left: 37.5rem;
+      left: 27.5rem;
 
       li {
         margin-left: 20px;
@@ -140,7 +140,7 @@ $transition-duration: 0.3s;
 
     @media (max-width: 1124px) {
       ul {
-        left: 20rem;
+        left: 16rem;
       }
       .logo {
         margin-left: 2rem;
@@ -155,10 +155,10 @@ $transition-duration: 0.3s;
         left: 10rem;
       }
       .logo {
-        margin-left: 2rem;
+        margin-left: 1rem;
       }
       .theme-toggle {
-        margin-right: 2rem;
+        margin-right: 1rem;
       }
     }
 
