@@ -13,11 +13,11 @@ section {
 
   @media (max-width: $breakpoint-sm) {
     //width: 95%;
-    padding: 1rem;
+    padding: 0.5rem;
     margin:auto;
   }
   @media (max-width: $breakpoint-md) {
-    padding: 1rem;
+    padding: 0.5rem;
   }
 
   .container {
